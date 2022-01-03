@@ -70,30 +70,12 @@ def find_max_region(img):
     cv2.waitKey(0)
 
 
-    hsv = cv2.cvtColor(final, cv2.COLOR_BGR2HSV)
-    low_hsv = np.array([26, 10, 46])
-    high_hsv = np.array([50, 255, 255])
-    mask = cv2.inRange(hsv, lowerb=low_hsv, upperb=high_hsv)
-
-    pixel_255 = len(mask[mask == 255])
-
-    if pixel_255>500:
-        print("黄胶带")
-    print("pixel_255",pixel_255)
-    cv2.imshow("test", mask)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-
-
-
-
-
 
 if __name__ == '__main__':
 
-    # img = cv2.imread(r"C:\Users\PL\Desktop\test\LIANGPIN_12109_1_12-21-18-40-26.png")
+    # img = cv2.imread(r" ")
     # roi = find_max_region(img)
-    images_path = "C:/Users/PL/Desktop/1223_queliao/0/YASHANG"
+    images_path = "C:/Users/PL/Desktop/"
     image_names = os.listdir(images_path)
     for image_name in image_names:
         image_path = os.path.join(images_path,image_name)
