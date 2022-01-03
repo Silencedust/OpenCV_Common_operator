@@ -4,6 +4,11 @@ from PIL import Image
 from PIL import ImageFilter
 import images
 
+'''
+use：filter滤波器
+time:2022/1/3
+make by:成都小混混
+'''
 
 def image_filters(image):
     # 预定义的图像增强滤波器
@@ -43,8 +48,6 @@ def image_filters(image):
     #卷积滤波
     img_kernel = img.filter(ImageFilter.Kernel((3,3),(1,1,1,0,0,0,2,0,2)))
 
-    # img.show()
-    # img_kernel.show()
     return
 
 if __name__ == '__main__':

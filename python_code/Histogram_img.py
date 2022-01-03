@@ -2,15 +2,13 @@ import os
 from numpy import *
 import cv2
 
+'''
+use：生成直方图图像
+time:2022/1/3
+make by:成都小混混
+'''
 
 def histeg(images):
-
-    ret_dict ={
-        "0":0,          #状态码
-        "1":"false",     #是否完成
-        "2":[]          #曲线图像
-    }
-    # 获取直方图p(r)
     for i,image in enumerate(images):
 
         # 灰度图像直方图均衡化
@@ -37,26 +35,16 @@ def histeg(images):
         # cv2.imshow("dst",result)
         # cv2.waitKey(0)
 
-        ret_dict["2"].append({"image":result})
-
-
-    return ret_dict
-
 if __name__ == '__main__':
 
-    # img = cv2.imread(r'C:\Users\PL\Desktop\full\0\31_04_16_18_13_04_326043.jpg')
-    # image = [img]
-
-    images_path = "C:/Users/PL/Desktop/989"
+    images_path = "C:/"
     image_names = os.listdir(images_path)
     image = []
     for image_name in image_names:
         image_path = os.path.join(images_path,image_name)
-        # print(image_path)
         img = cv2.imread(image_path)
         image.append(img)
-        # cv2.imshow("img",img)
-        # cv2.waitKey(0)
+
 
     ret = histeg(image)
 

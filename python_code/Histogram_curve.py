@@ -4,6 +4,11 @@ import cv2
 from matplotlib import pyplot as plt
 import shutil
 
+'''
+use：生成直方图曲线
+time:2022/1/3
+make by:成都小混混
+'''
 
 def histeg(images,bins,type,judge):
 
