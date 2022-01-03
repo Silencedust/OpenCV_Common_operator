@@ -47,11 +47,9 @@ def image_filters(image):
     # img_kernel.show()
     return
 
-
-
 if __name__ == '__main__':
     #打开为numpy格式
-    image = cv2.imread("../../images/filter.png")
+    image = cv2.imread("../images/filter.png")
     image_filters(image)
 
     # #打开为PIL数据格式
